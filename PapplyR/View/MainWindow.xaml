@@ -1,0 +1,51 @@
+﻿<Window x:Class="PapplyR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PapplyR"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="grid_template" Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border x:Name="grid_sidebar" Background="#9190cd" Grid.Column="0" Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Border x:Name="lbl_titre" Background="#00000000" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label Content="Papply" Height="NaN" Width="NaN" Foreground="White" FontSize="23" FontWeight="Bold"/>
+
+                </Border>
+
+                <Border Background="Transparent" Grid.Row="1">
+                    <Button x:Name="btn_dashboard" Click="btn_dashboard_Click" Content="Dashboard" Height="NaN" Width="NaN" Background="Transparent" Foreground="#FF3D00" FontWeight="Bold" FontSize="13"/>
+                </Border>
+
+                <Border Background="Transparent" Grid.Row="2">
+                    <Button x:Name="btn_eleve" Content="Eleves" Height="NaN" Width="NaN" Background="Transparent" Foreground="#FF3D00" FontWeight="Bold" FontSize="13" Click="btn_eleve_Click"/>
+                </Border>
+
+                <Border Background="Transparent" Grid.Row="3">
+                    <Button x:Name="btn_promotion" Content="Promotion" Height="NaN" Width="NaN" Background="Transparent" Foreground="#FF3D00" FontWeight="Bold" FontSize="13" Click="btn_promotion_Click"/>
+                </Border>
+
+                <Border Background="Transparent" Grid.Row="4">
+                    <Button x:Name="btn_tp" Content="TP" Height="NaN" Width="NaN" Background="Transparent" Foreground="#FF3D00" FontWeight="Bold" FontSize="13" Click="btn_tp_Click"/>
+                </Border>
+            </Grid>
+        </Border>
+
+        <Frame x:Name="frame_template" Grid.Column="1">
+        </Frame>
+    </Grid>
+</Window>
